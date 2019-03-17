@@ -1,0 +1,6 @@
+<view class="background-img">
+ <image  class="img" src="../../images/beijing.jpg"></image>
+</view>
+<view >
+    <button class="button" bindtap='addUser'> 添加孩子</button>
+</view>

@@ -1,0 +1,33 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">姓名</view>
+    <input name="name" placeholder="孩子姓名" />
+  </view>
+  <view class="section">
+    <view class="section__title">年龄</view>
+    <input name="age" placeholder="年龄"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">性别</view>
+    <radio-group name="sex">
+      <label>
+        <radio checkbox value="男" checked/>男</label>
+      <label>
+        <radio value="女" />女</label>
+    </radio-group>
+  </view>
+  <view class="section__title">爱好</view>
+   <checkbox-group name="hobby">
+      <label><checkbox value="抽烟"/>抽烟</label>
+      <label><checkbox value="喝酒"/>喝酒</label>
+      <label><checkbox value="烫头"/>烫头</label>
+    </checkbox-group>
+   <view class="section">
+    <view class="section__title">联系电话</view>
+    <input name="phone" placeholder="联系电话"/>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
