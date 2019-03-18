@@ -23,21 +23,27 @@ Page({
                         },
                         data: {code: code},
                         success: function (data) {
-                            if (data.data.success == 0) {
-                                var user = data.data.userInfo;
+                          console.log(data.data.success)
+                            if (data.data.success) {
+                                var user = data.data.object.object;
                                 wx.setStorageSync('userInfo', user)
-                                if (user != null && user.state == 0) {
+                              if (user != null && user.type == 0) {
+                                wx.reLaunch({
+                                  url: '/pages/logi/logi/logi',
+                                })
+                                return ;
+                              }
+                              if (user != null && user.state == 0) {
                                     wx.reLaunch({
-                                        url: '/pages/logi/logi/logi',
+                                      url: '/pages/logi/logiMsg/logiMsg',
                                     })
                                 } 
-                                if (user != null && user.type == 0) {
-                                    wx.reLaunch({
-                                        url: '/pages/logi/logiMsg/logiMsg',
-                                    })
-                                }
+                              wx.hideLoading();
+                            }else{
+                              wx.reLaunch({
+                                url: '/pages/logi/logi/logi',
+                              })
                             }
-                            wx.hideLoading();
                         },
                         fail: function () {
                             console.log('系统错误')
