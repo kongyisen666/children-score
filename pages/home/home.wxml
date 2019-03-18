@@ -1,5 +1,5 @@
 <view>{{score}}</view>
 <view>{{name}}</view>
-<button bindtap="addScore" data-score='2'>按时完成作业</button>
-<button bindtap="addScore" data-score='1'>做家务</button>
-<button bindtap="addScore" data-score='-2'>不听话</button>
+<button bindtap="addScore" data-msg='按时完成作业' data-score='2'>按时完成作业</button>
+<button bindtap="addScore" data-msg='做家务' data-score='1'>做家务</button>
+<button bindtap="addScore" data-msg='不听话' data-score='-2'>不听话</button>

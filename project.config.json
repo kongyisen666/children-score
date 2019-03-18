@@ -37,6 +37,8 @@
 		"miniprogram": {
 			"current": -1,
 			"list": []
-		}
+		},"url":{
+      "project":""
+    }
 	}
 }
